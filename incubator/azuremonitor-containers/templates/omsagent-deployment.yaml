@@ -38,7 +38,7 @@ spec:
        resources:
 {{ toYaml .Values.omsagent.resources.deployment | indent 9 }}
        env:
-       - name: ACS_RESOURCE_NAME
+       - name: AKS_RESOURCE_NAME
          value: {{ .Values.omsagent.env.clusterName | quote }}
        - name: CONTROLLER_TYPE
          value: "ReplicaSet"
